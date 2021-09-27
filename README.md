@@ -2,8 +2,8 @@
 - 👀 I’m interested in UI/UX Design, Web Application Development and Artificial Intelligence especially in NLP.
 - 🌱 I’m currently learning AI with python.
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=hereisamara&show_icons=true&theme=onedark)] <br>
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=vj-codes&theme=onedark)]
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=hereisamara&show_icons=true&theme=onedark) <br>
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=vj-codes&theme=onedark)
 
 <!---
 hereisamara/hereisamara is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
