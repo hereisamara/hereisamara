@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @hereisamara
-- 👀 I’m interested in Web Application Development and Artificial Intelligence especially in NLP.
+- 👀 I’m interested in Web Application Development and Artificial Intelligence.
 - 🌱 I’m currently learning AI with python.
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=hereisamara&show_icons=true&theme=tokyonight) <br>
