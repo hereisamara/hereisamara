@@ -20,11 +20,10 @@ jobs:
         curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/user/repos?visibility=private > repos.json
         cat repos.json | jq -r '.[] | .full_name' > repos/repo_list.txt
 
-    - name: Fetch Stats for Each Repo
+    - name: Fetch Language Stats for Each Repo
       run: |
         mkdir -p stats
         while IFS= read -r repo; do
-          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/stats/contributors > stats/$repo-contributors.json
           curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/languages > stats/$repo-languages.json
         done < repos/repo_list.txt
 
