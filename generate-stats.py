@@ -1,17 +1,19 @@
 import json
 import os
-import requests
 
 # Function to calculate language percentages
 def calculate_percentages(language_data):
     total_lines = sum(language_data.values())
     return {lang: (lines / total_lines) * 100 for lang, lines in language_data.items()}
 
-# Function to generate a chart using quickchart.io
-def generate_chart(language_percentages):
-    labels = list(language_percentages.keys())
-    data = list(language_percentages.values())
-    chart_url = f"https://quickchart.io/chart?c={{type:'pie',data:{{labels:{labels},datasets:[{{data:{data}}}]}}}}"
+# Function to generate a chart URL using quickchart.io
+def generate_chart_url(language_percentages):
+    labels = ",".join(language_percentages.keys())
+    data = ",".join(str(round(value, 2)) for value in language_percentages.values())
+    chart_url = (
+        "https://quickchart.io/chart/render/zm-79ed2590-8f84-4b5a-9246-c91b5216c746"
+        f"?title=Language%20Distribution&labels={labels}&data1={data}"
+    )
     return chart_url
 
 # Gather and process language stats
@@ -37,11 +39,11 @@ if os.path.exists(repo_list_path):
 
 # Calculate percentages and generate chart URL
 language_percentages = calculate_percentages(overall_language_data)
-chart_url = generate_chart(language_percentages)
+chart_url = generate_chart_url(language_percentages)
 
 # Generate Markdown output
 output = []
-output.append("## Private Repository Language Stats\n")
+output.append("## My Languages\n")
 output.append(f"![Language Stats]({chart_url})\n")
 
 # Save output
