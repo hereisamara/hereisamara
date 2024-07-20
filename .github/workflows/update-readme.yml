@@ -24,7 +24,9 @@ jobs:
       run: |
         mkdir -p stats
         while IFS= read -r repo; do
-          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/languages > stats/$repo-languages.json
+          repo_sanitized=$(echo $repo | tr / _)
+          mkdir -p stats/$repo_sanitized
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/languages > stats/$repo_sanitized/languages.json
         done < repos/repo_list.txt
 
     - name: Generate Stats
