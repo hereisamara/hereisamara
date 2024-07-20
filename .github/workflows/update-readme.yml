@@ -31,16 +31,17 @@ jobs:
 
     - name: Generate Stats
       run: |
-        python generate-stats.py
+        python generate_stats.py
 
-    - name: Update README
+    - name: Append Stats to README
       run: |
-        cat stats/output.md > README.md
+        cat README.md stats/output.md > README_tmp.md
+        mv README_tmp.md README.md
 
     - name: Commit Changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add README.md
-        git commit -m "Update README with private repo stats"
+        git commit -m "Update README with private repo language stats"
         git push
