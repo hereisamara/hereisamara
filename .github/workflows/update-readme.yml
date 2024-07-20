@@ -31,7 +31,7 @@ jobs:
 
     - name: Generate Stats
       run: |
-        python generate_stats.py
+        python generate-stats.py
 
     - name: Update README
       run: |
