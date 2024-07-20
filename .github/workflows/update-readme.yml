@@ -2,7 +2,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: '0 * * * *'  # This runs the workflow every hour
+    - cron: '0 0 * * *'  # This runs the workflow once a day
   workflow_dispatch:
 
 jobs:
@@ -13,17 +13,20 @@ jobs:
     - name: Checkout Profile Repo
       uses: actions/checkout@v2
 
-    - name: Checkout Private Repo
-      uses: actions/checkout@v2
-      with:
-        repository: your-username/private-repo
-        token: ${{ secrets.GH_TOKEN }}
+    - name: Fetch Repositories
+      id: fetch-repos
+      run: |
+        mkdir -p repos
+        curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/user/repos?visibility=private > repos.json
+        cat repos.json | jq -r '.[] | .full_name' > repos/repo_list.txt
 
-    - name: Fetch Stats
+    - name: Fetch Stats for Each Repo
       run: |
         mkdir -p stats
-        curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/your-username/private-repo/stats/contributors > stats/contributors.json
-        curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/your-username/private-repo/languages > stats/languages.json
+        while IFS= read -r repo; do
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/stats/contributors > stats/$repo-contributors.json
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" https://api.github.com/repos/$repo/languages > stats/$repo-languages.json
+        done < repos/repo_list.txt
 
     - name: Generate Stats
       run: |
@@ -31,7 +34,7 @@ jobs:
 
     - name: Update README
       run: |
-        cat stats/output.md >> README.md
+        cat stats/output.md > README.md
 
     - name: Commit Changes
       run: |
