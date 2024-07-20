@@ -4,7 +4,9 @@ import os
 # Function to calculate language percentages
 def calculate_percentages(language_data):
     total_lines = sum(language_data.values())
-    return {lang: (lines / total_lines) * 100 for lang, lines in language_data.items()}
+    percentages = {lang: (lines / total_lines) * 100 for lang, lines in language_data.items()}
+    sorted_percentages = dict(sorted(percentages.items(), key=lambda item: item[1], reverse=True))
+    return sorted_percentages
 
 # Function to generate a chart URL using quickchart.io
 def generate_chart_url(language_percentages):
@@ -32,11 +34,11 @@ if os.path.exists(repo_list_path):
             with open(languages_path) as f:
                 languages = json.load(f)
             for lang, lines in languages.items():
-                lang_ = lang.replace(' ','-')
+                lange_ = lang.replace(" ", "-")
                 if lang in overall_language_data:
-                    overall_language_data[lang] += lines
+                    overall_language_data[lange_] += lines
                 else:
-                    overall_language_data[lang] = lines
+                    overall_language_data[lange_] = lines
 
 # Calculate percentages and generate chart URL
 language_percentages = calculate_percentages(overall_language_data)
