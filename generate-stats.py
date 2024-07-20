@@ -11,7 +11,7 @@ def generate_chart_url(language_percentages):
     labels = ",".join(language_percentages.keys())
     data = ",".join(str(round(value, 2)) for value in language_percentages.values())
     chart_url = (
-        "https://quickchart.io/chart/render/zm-16771691-33a4-45fe-bf52-3ee5f5c8415e"
+        "https://quickchart.io/chart/render/zm-cd1c40c6-291e-4317-9f6e-528e56c02bdb"
         f"?title=Language%20Distribution&labels={labels}&data1={data}"
     )
     return chart_url
