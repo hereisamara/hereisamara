@@ -12,9 +12,10 @@ if os.path.exists(repo_list_path):
 
     for repo in repos:
         repo = repo.strip()
+        repo_sanitized = repo.replace("/", "_")
         output.append(f"### {repo}\n")
 
-        languages_path = f'stats/{repo}-languages.json'
+        languages_path = f'stats/{repo_sanitized}/languages.json'
         if os.path.exists(languages_path):
             with open(languages_path) as f:
                 languages = json.load(f)
