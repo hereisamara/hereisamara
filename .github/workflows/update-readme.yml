@@ -33,10 +33,10 @@ jobs:
       run: |
         python generate-stats.py
 
-    - name: Append Stats to README
+    - name: Update README with New Stats
       run: |
-        cat README.md stats/output.md > README_tmp.md
-        mv README_tmp.md README.md
+        sed -i '/<!-- STATS_START -->/,/<!-- STATS_END -->/{//!d}' README.md
+        sed -i '/<!-- STATS_START -->/r stats/output.md' README.md
 
     - name: Commit Changes
       run: |
