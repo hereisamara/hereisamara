@@ -11,7 +11,7 @@ def generate_chart_url(language_percentages):
     labels = ",".join(language_percentages.keys())
     data = ",".join(str(round(value, 2)) for value in language_percentages.values())
     chart_url = (
-        "https://quickchart.io/chart/render/zm-79ed2590-8f84-4b5a-9246-c91b5216c746"
+        "https://quickchart.io/chart/render/zm-16771691-33a4-45fe-bf52-3ee5f5c8415e"
         f"?title=Language%20Distribution&labels={labels}&data1={data}"
     )
     return chart_url
@@ -32,6 +32,7 @@ if os.path.exists(repo_list_path):
             with open(languages_path) as f:
                 languages = json.load(f)
             for lang, lines in languages.items():
+                lang_ = lang.replace(' ','-')
                 if lang in overall_language_data:
                     overall_language_data[lang] += lines
                 else:
