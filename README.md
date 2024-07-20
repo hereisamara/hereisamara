@@ -1,3 +1,7 @@
-## Private Repository Language Stats
+- 👋 Hi, I’m @hereisamara
+- 👀 I’m interested in Web Application Development and Artificial Intelligence.
+- 🌱 I am learning an growing. 
+- 🌱 I am learning and growing. 
 
-![Language Stats](https://quickchart.io/chart?c={type:'pie',data:{labels:['C', 'HTML', 'Dart', 'C++', 'CMake', 'Swift', 'Objective-C', 'Java', 'Kotlin', 'Python', 'Shell', 'Ruby', 'JavaScript', 'CSS', 'Jupyter Notebook', 'Procfile'],datasets:[{data:[0.27154670972248207, 9.158587332405803, 12.763094103960654, 3.6927295461893577, 2.848715054394076, 0.2849379632734072, 0.061872243453654135, 0.053465327452701134, 0.04120385707976967, 64.66569881907752, 0.2352939612756847, 0.09815822081745129, 1.0146117516723283, 0.19764559831489517, 4.61170847473622, 0.0007310361739959135]}]}})
+<!-- ![GitHub stats](https://github-readme-stats.vercel.app/api?username=hereisamara&show_icons=true&theme=tokyonight) <br> -->
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=hereisamara&theme=tokyonight)
