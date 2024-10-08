@@ -11,5 +11,5 @@
 <!-- STATS_START -->
 ## My Languages
 
-![Language Stats](https://quickchart.io/chart/render/zm-cd1c40c6-291e-4317-9f6e-528e56c02bdb?title=Language%20Distribution&labels=Python,Dart,HTML,Jupyter-Notebook,C++,CMake,Go,JavaScript,Swift,C,Shell,CSS,Ruby,Objective-C,Java,Kotlin,Dockerfile,Procfile&data1=62.06,14.98,8.73,4.4,3.54,2.72,1.3,0.97,0.28,0.26,0.22,0.19,0.18,0.07,0.06,0.04,0.02,0.0)
+![Language Stats](https://quickchart.io/chart/render/zm-cd1c40c6-291e-4317-9f6e-528e56c02bdb?title=Language%20Distribution&labels=JavaScript,Python,Dart,HTML,Java,Jupyter-Notebook,C++,CMake,CSS,Go,Swift,C,Shell,Ruby,Objective-C,Kotlin,Dockerfile,Procfile&data1=81.13,10.96,2.65,1.72,0.78,0.78,0.62,0.48,0.46,0.23,0.05,0.05,0.04,0.03,0.01,0.01,0.0,0.0)
 <!-- STATS_END -->
