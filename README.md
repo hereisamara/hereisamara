@@ -17,7 +17,7 @@
 
 ### 📫 Let's Connect!  
 [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hereisamara) 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/your-profile/](https://www.linkedin.com/in/khin-eaindray-htun/)) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khin-eaindray-htun/)) 
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@khineaindrayhtun)
 
 ⭐ **Fun Fact:** Even when I’m procrastinating, I somehow end up being productive-like cleaning, cooking, or doing chores instead of the actual work I’m supposed to do. So technically, I’m always kind of getting things done! 😆
