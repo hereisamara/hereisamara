@@ -20,8 +20,5 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/khin-eaindray-htun/) 
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@khineaindrayhtun)
 
-⭐ **Fun Fact:** Even when I’m procrastinating, I somehow end up being productive-like cleaning, cooking, or doing chores instead of the actual work I’m supposed to do. So technically, I’m always kind of getting things done! 😆
 
----
-💻 **Current Focus:** Deepening my understanding of **AI/ML** and how things work under the hood!  
 
